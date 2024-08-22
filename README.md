@@ -1,0 +1,1 @@
+A full-stack CRUD application that simulates corporate management through the Spring Boot and React frameworks.
