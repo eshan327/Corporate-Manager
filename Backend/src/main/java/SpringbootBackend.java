@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootBackend {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBackend.class, args);
-	}
-
+    // Main method to run the Spring Boot application
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootBackend.class, args);
+    }
 }

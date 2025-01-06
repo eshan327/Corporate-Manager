@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Render the main App component into the root element
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -12,7 +13,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// Changing unregister() to register() to explore offline functionality is a possibility...
 serviceWorker.unregister();

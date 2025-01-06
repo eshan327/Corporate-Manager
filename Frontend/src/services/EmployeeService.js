@@ -4,25 +4,30 @@ const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees";
 
 class EmployeeService {
 
-    getEmployees(){
+    // Fetch all employees
+    getEmployees() {
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 
-    createEmployee(employee){
+    // Create a new employee
+    createEmployee(employee) {
         return axios.post(EMPLOYEE_API_BASE_URL, employee);
     }
 
-    getEmployeeById(employeeId){
-        return axios.get(EMPLOYEE_API_BASE_URL + '/' + employeeId);
+    // Fetch an employee by ID
+    getEmployeeById(employeeId) {
+        return axios.get(`${EMPLOYEE_API_BASE_URL}/${employeeId}`);
     }
 
-    updateEmployee(employee, employeeId){
-        return axios.put(EMPLOYEE_API_BASE_URL + '/' + employeeId, employee);
+    // Update an existing employee
+    updateEmployee(employee, employeeId) {
+        return axios.put(`${EMPLOYEE_API_BASE_URL}/${employeeId}`, employee);
     }
 
-    deleteEmployee(employeeId){
-        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
+    // Delete an employee by ID
+    deleteEmployee(employeeId) {
+        return axios.delete(`${EMPLOYEE_API_BASE_URL}/${employeeId}`);
     }
 }
 
-export default new EmployeeService()
+export default new EmployeeService();

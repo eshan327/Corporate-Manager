@@ -1,38 +1,41 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
 class CreateEmployeeComponent extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            // step 2
+            // Initialize state with empty fields and id from props
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
             emailId: ''
-        }
+        };
+
+        // Bind handlers to `this`
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
         this.saveOrUpdateEmployee = this.saveOrUpdateEmployee.bind(this);
     }
 
-    // step 3
-    componentDidMount(){
-
-        // step 4
-        if(this.state.id === '_add'){
-            return
-        }else{
-            EmployeeService.getEmployeeById(this.state.id).then( (res) =>{
+    // Fetch employee data if updating an existing employee
+    componentDidMount() {
+        if (this.state.id === '_add') {
+            return;
+        } else {
+            EmployeeService.getEmployeeById(this.state.id).then((res) => {
                 let employee = res.data;
-                this.setState({firstName: employee.firstName,
+                this.setState({
+                    firstName: employee.firstName,
                     lastName: employee.lastName,
-                    emailId : employee.emailId
+                    emailId: employee.emailId
                 });
             });
-        }        
+        }
     }
+
+    // Save or update employee
     saveOrUpdateEmployee = (e) => {
         e.preventDefault();
         let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
@@ -48,16 +51,19 @@ class CreateEmployeeComponent extends Component {
                 this.props.history.push('/employees');
             });
         }
-    }
-    
-    changeFirstNameHandler= (event) => {
-        this.setState({firstName: event.target.value});
-    }
+    };
 
-    changeLastNameHandler= (event) => {
-        this.setState({lastName: event.target.value});
-    }
+    // Handler for first name change
+    changeFirstNameHandler = (event) => {
+        this.setState({ firstName: event.target.value });
+    };
 
+    // Handler for last name change
+    changeLastNameHandler = (event) => {
+        this.setState({ lastName: event.target.value });
+    };
+
+    // Handler for email change
     changeEmailHandler= (event) => {
         this.setState({emailId: event.target.value});
     }
@@ -73,6 +79,8 @@ class CreateEmployeeComponent extends Component {
             return <h3 className="text-center">Update Employee</h3>
         }
     }
+
+    // Render method
     render() {
         return (
             <div>
@@ -114,4 +122,4 @@ class CreateEmployeeComponent extends Component {
     }
 }
 
-export default CreateEmployeeComponent
+export default CreateEmployeeComponent;

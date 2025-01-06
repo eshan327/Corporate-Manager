@@ -11,11 +11,13 @@ class UpdateEmployeeComponent extends Component {
             lastName: '',
             emailId: ''
         }
+        // Bind handlers to `this`
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
         this.updateEmployee = this.updateEmployee.bind(this);
     }
 
+    // Fetch employee data when the component is mounted
     componentDidMount(){
         EmployeeService.getEmployeeById(this.state.id).then( (res) =>{
             let employee = res.data;
@@ -26,6 +28,7 @@ class UpdateEmployeeComponent extends Component {
         });
     }
 
+    // Update employee details
     updateEmployee = (e) => {
         e.preventDefault();
         let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
@@ -36,10 +39,12 @@ class UpdateEmployeeComponent extends Component {
         });
     }
     
+    // Handler for first name change
     changeFirstNameHandler= (event) => {
         this.setState({firstName: event.target.value});
     }
 
+    // Handler for last name change
     changeLastNameHandler= (event) => {
         this.setState({lastName: event.target.value});
     }

@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+/* Animation for rotating elements */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,10 +44,11 @@
   }
 }
 
+/* Footer styling */
 .footer {
   position: absolute;
   bottom: 0;
-  width:100%;
+  width: 100%;
   height: 50px;
   background-color: black;
   text-align: center;

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class HeaderComponent extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-                 
-        }
+            // State can be used for future enhancements
+        };
     }
 
     render() {
@@ -14,12 +14,16 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="https://javaguides.net" className="navbar-brand">Employee Management App</a></div>
+                        <div>
+                            <a href="https://google.com" className="navbar-brand">
+                                Employee Management App
+                            </a>
+                        </div>
                     </nav>
                 </header>
             </div>
-        )
+        );
     }
 }
 
-export default HeaderComponent
+export default HeaderComponent;

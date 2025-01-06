@@ -43,26 +43,32 @@ public class Employee {
 		this.id = id;
 	}
 
+	// Get the first name of the employee
 	public String getFirstName() {
 		return firstName;
 	}
 
+	// Set the first name of the employee
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
+	// Get the last name of the employee
 	public String getLastName() {
 		return lastName;
 	}
 
+	// Set the last name of the employee
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
+	// Get the email ID of the employee
 	public String getEmailId() {
 		return emailId;
 	}
 
+	// Set the email ID of the employee
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
