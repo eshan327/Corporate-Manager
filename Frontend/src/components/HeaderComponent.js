@@ -16,7 +16,7 @@ class HeaderComponent extends Component {
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                         <div>
                             <a href="https://google.com" className="navbar-brand">
-                                Employee Management App
+                                Manager
                             </a>
                         </div>
                     </nav>
