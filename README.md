@@ -19,8 +19,8 @@ Firstly, make sure your JDK, Node.js, and MySQL versions are up-to-date. I belie
 
 Cloning the repo:
    ```sh
-  git clone https://github.com/eshan327/Employee-Management-App.git
-  cd Employee-Management-App
+  git clone https://github.com/eshan327/Corporate-Manager.git
+  cd Corporate-Manager
    ```
 Setting up the backend:
    ```sh
@@ -43,4 +43,4 @@ npm start
 Lastly, open up `http://localhost:3000` in your browser and you're good to go!
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/eshan327/Employee-Management-App/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/eshan327/Corporate-Manager/blob/main/LICENSE) file for details.
