@@ -16,7 +16,7 @@ Some features:
 - Axios HTTP Library
 
 ## Installation
-Firstly, make sure your JDK, Node.js, and MySQL versions are up-to-date. I believe any JDK 11+ or higher, Node.js 14+ or higher, and MySQL 8+ should suffice though.
+Firstly, make sure your JDK, Node.js, and MySQL versions are up-to-date. I believe any JDK 11+ or higher, Node.js 14+ or higher, and MySQL 8+ should suffice though. Also: Spring Boot 2+ and Maven 3+.
 
 Cloning the repo:
    ```sh
